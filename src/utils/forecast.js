@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
     } else if (body.error) {
         callback('Cannot find the weather for that location. Please choose another.', undefined) 
     } else {
-           callback(undefined, body.daily.data[0].summary + ' It is currently '+ body.currently.temperature + ' degrees out and there is a ' + body.currently.precipProbability + '% chance of percipitation. <br> The high today is ' + body.daily.data[0].temperatureHigh + ' and the low is going to be ' + temperatureLow + '.')
+           callback(undefined, body.daily.data[0].summary + ' It is currently '+ body.currently.temperature + ' degrees out and there is a ' + body.currently.precipProbability + '% chance of percipitation. The high today is ' + body.daily.data[0].temperatureHigh + ' and the low is going to be ' + body.daily.data[0].temperatureLow + '.')
                }
     })
         
